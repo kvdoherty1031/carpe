@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1A126F31CFC701000D9A86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F21CFC701000D9A86A /* AppDelegate.swift */; };
+		D1A126F51CFC701000D9A86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F41CFC701000D9A86A /* ViewController.swift */; };
+		D1A126F81CFC701000D9A86A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A126F61CFC701000D9A86A /* Main.storyboard */; };
+		D1A126FA1CFC701000D9A86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A126F91CFC701000D9A86A /* Assets.xcassets */; };
+		D1A126FD1CFC701000D9A86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D1A126EF1CFC701000D9A86A /* carpeDialarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpeDialarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A126F21CFC701000D9A86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1A126F41CFC701000D9A86A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1A126F71CFC701000D9A86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1A126F91CFC701000D9A86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1A126FC1CFC701000D9A86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1A126FE1CFC701000D9A86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1A126EC1CFC701000D9A86A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1A126E61CFC701000D9A86A = {
+			isa = PBXGroup;
+			children = (
+				D1A126F11CFC701000D9A86A /* carpeDialarm */,
+				D1A126F01CFC701000D9A86A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1A126F01CFC701000D9A86A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1A126EF1CFC701000D9A86A /* carpeDialarm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1A126F11CFC701000D9A86A /* carpeDialarm */ = {
+			isa = PBXGroup;
+			children = (
+				D1A126F21CFC701000D9A86A /* AppDelegate.swift */,
+				D1A126F41CFC701000D9A86A /* ViewController.swift */,
+				D1A126F61CFC701000D9A86A /* Main.storyboard */,
+				D1A126F91CFC701000D9A86A /* Assets.xcassets */,
+				D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */,
+				D1A126FE1CFC701000D9A86A /* Info.plist */,
+			);
+			path = carpeDialarm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1A126EE1CFC701000D9A86A /* carpeDialarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A127011CFC701000D9A86A /* Build configuration list for PBXNativeTarget "carpeDialarm" */;
+			buildPhases = (
+				D1A126EB1CFC701000D9A86A /* Sources */,
+				D1A126EC1CFC701000D9A86A /* Frameworks */,
+				D1A126ED1CFC701000D9A86A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carpeDialarm;
+			productName = carpeDialarm;
+			productReference = D1A126EF1CFC701000D9A86A /* carpeDialarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1A126E71CFC701000D9A86A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kevin Doherty";
+				TargetAttributes = {
+					D1A126EE1CFC701000D9A86A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = D1A126EA1CFC701000D9A86A /* Build configuration list for PBXProject "carpeDialarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1A126E61CFC701000D9A86A;
+			productRefGroup = D1A126F01CFC701000D9A86A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1A126EE1CFC701000D9A86A /* carpeDialarm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1A126ED1CFC701000D9A86A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A126FD1CFC701000D9A86A /* LaunchScreen.storyboard in Resources */,
+				D1A126FA1CFC701000D9A86A /* Assets.xcassets in Resources */,
+				D1A126F81CFC701000D9A86A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1A126EB1CFC701000D9A86A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A126F51CFC701000D9A86A /* ViewController.swift in Sources */,
+				D1A126F31CFC701000D9A86A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D1A126F61CFC701000D9A86A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A126F71CFC701000D9A86A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A126FC1CFC701000D9A86A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1A126FF1CFC701000D9A86A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1A127001CFC701000D9A86A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1A127021CFC701000D9A86A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = carpeDialarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D1A127031CFC701000D9A86A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = carpeDialarm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1A126EA1CFC701000D9A86A /* Build configuration list for PBXProject "carpeDialarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A126FF1CFC701000D9A86A /* Debug */,
+				D1A127001CFC701000D9A86A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A127011CFC701000D9A86A /* Build configuration list for PBXNativeTarget "carpeDialarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A127021CFC701000D9A86A /* Debug */,
+				D1A127031CFC701000D9A86A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1A126E71CFC701000D9A86A /* Project object */;
+}
