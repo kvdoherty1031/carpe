@@ -120,10 +120,9 @@ override func viewDidLoad() {
     
         beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
-        beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 42673, minor: 123, identifier: "alarmBeacon region")
+        beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 55315, minor: 2, identifier: "alarmBeacon region")
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = false
-        beaconManager.startMonitoringForRegion(beaconRegion)
         self.locationManager.startUpdatingLocation()
 }
 
@@ -156,6 +155,8 @@ override func viewDidLoad() {
 //    }
 
 func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
+        self.audioPlayer.stop()
+
         print("entered the region" )
         //var viewController = ViewController()
         self.alarmActivated = false
@@ -370,6 +371,9 @@ func setTimers(){
     }
 
 func playAlarmSounds(){
+    
+        beaconManager.startMonitoringForRegion(beaconRegion)
+
         print("self.timer = \(self.timer.timeInterval)")
         print("playAlarmSounds in .Delegate called")
 
