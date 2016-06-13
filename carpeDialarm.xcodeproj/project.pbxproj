@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D121EDBB1D064F8600C42F1A /* railroad_crossing_bell-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D121EDBA1D064F8600C42F1A /* railroad_crossing_bell-.mp3 */; };
 		D1A126F31CFC701000D9A86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F21CFC701000D9A86A /* AppDelegate.swift */; };
 		D1A126F51CFC701000D9A86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F41CFC701000D9A86A /* ViewController.swift */; };
 		D1A126F81CFC701000D9A86A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A126F61CFC701000D9A86A /* Main.storyboard */; };
 		D1A126FA1CFC701000D9A86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A126F91CFC701000D9A86A /* Assets.xcassets */; };
 		D1A126FD1CFC701000D9A86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */; };
+		D1A127051CFC742400D9A86A /* AlarmTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A127041CFC742400D9A86A /* AlarmTimePickerView.swift */; };
+		D1A127091CFE745500D9A86A /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A127081CFE745500D9A86A /* EstimoteSDK.framework */; };
+		D1A1270B1CFE804500D9A86A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A1270A1CFE804400D9A86A /* CoreLocation.framework */; };
+		D1A1270D1CFE805000D9A86A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A1270C1CFE805000D9A86A /* CoreBluetooth.framework */; };
+		D1A1270F1CFE805900D9A86A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A1270E1CFE805900D9A86A /* Foundation.framework */; };
+		D1A127111CFE806A00D9A86A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A127101CFE806A00D9A86A /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D121EDBA1D064F8600C42F1A /* railroad_crossing_bell-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "railroad_crossing_bell-.mp3"; sourceTree = "<group>"; };
 		D1A126EF1CFC701000D9A86A /* carpeDialarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpeDialarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A126F21CFC701000D9A86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A126F41CFC701000D9A86A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,13 @@
 		D1A126F91CFC701000D9A86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A126FC1CFC701000D9A86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A126FE1CFC701000D9A86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A127041CFC742400D9A86A /* AlarmTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTimePickerView.swift; sourceTree = "<group>"; };
+		D1A127071CFE711E00D9A86A /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ObjCBridge.h; path = ../ObjCBridge.h; sourceTree = "<group>"; };
+		D1A127081CFE745500D9A86A /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		D1A1270A1CFE804400D9A86A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D1A1270C1CFE805000D9A86A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		D1A1270E1CFE805900D9A86A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D1A127101CFE806A00D9A86A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A127111CFE806A00D9A86A /* SystemConfiguration.framework in Frameworks */,
+				D1A1270F1CFE805900D9A86A /* Foundation.framework in Frameworks */,
+				D1A1270D1CFE805000D9A86A /* CoreBluetooth.framework in Frameworks */,
+				D1A1270B1CFE804500D9A86A /* CoreLocation.framework in Frameworks */,
+				D1A127091CFE745500D9A86A /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +74,30 @@
 		D1A126F11CFC701000D9A86A /* carpeDialarm */ = {
 			isa = PBXGroup;
 			children = (
+				D1A127071CFE711E00D9A86A /* ObjCBridge.h */,
+				D1A126F61CFC701000D9A86A /* Main.storyboard */,
+				D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */,
 				D1A126F21CFC701000D9A86A /* AppDelegate.swift */,
 				D1A126F41CFC701000D9A86A /* ViewController.swift */,
-				D1A126F61CFC701000D9A86A /* Main.storyboard */,
+				D1A127041CFC742400D9A86A /* AlarmTimePickerView.swift */,
 				D1A126F91CFC701000D9A86A /* Assets.xcassets */,
-				D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */,
+				D121EDBA1D064F8600C42F1A /* railroad_crossing_bell-.mp3 */,
 				D1A126FE1CFC701000D9A86A /* Info.plist */,
+				D1A127061CFE70CC00D9A86A /* Supporting Files */,
 			);
 			path = carpeDialarm;
+			sourceTree = "<group>";
+		};
+		D1A127061CFE70CC00D9A86A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1A127101CFE806A00D9A86A /* SystemConfiguration.framework */,
+				D1A1270E1CFE805900D9A86A /* Foundation.framework */,
+				D1A1270C1CFE805000D9A86A /* CoreBluetooth.framework */,
+				D1A1270A1CFE804400D9A86A /* CoreLocation.framework */,
+				D1A127081CFE745500D9A86A /* EstimoteSDK.framework */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +132,12 @@
 				TargetAttributes = {
 					D1A126EE1CFC701000D9A86A = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = U6LLNV8Q7K;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +167,7 @@
 				D1A126FD1CFC701000D9A86A /* LaunchScreen.storyboard in Resources */,
 				D1A126FA1CFC701000D9A86A /* Assets.xcassets in Resources */,
 				D1A126F81CFC701000D9A86A /* Main.storyboard in Resources */,
+				D121EDBB1D064F8600C42F1A /* railroad_crossing_bell-.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A127051CFC742400D9A86A /* AlarmTimePickerView.swift in Sources */,
 				D1A126F51CFC701000D9A86A /* ViewController.swift in Sources */,
 				D1A126F31CFC701000D9A86A /* AppDelegate.swift in Sources */,
 			);
@@ -202,6 +246,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ObjCBridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -240,6 +286,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ObjCBridge.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -249,10 +297,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/carpeDialarm",
+				);
 				INFOPLIST_FILE = carpeDialarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ObjCBridge.h";
 			};
 			name = Debug;
 		};
@@ -260,10 +314,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/carpeDialarm",
+				);
 				INFOPLIST_FILE = carpeDialarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ObjCBridge.h";
 			};
 			name = Release;
 		};
@@ -286,6 +346,7 @@
 				D1A127031CFC701000D9A86A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
