@@ -15,17 +15,17 @@ import AVFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var secondsTillAlarmDate = NSDate()
-    var secondsTillAlarmInterval = NSTimeInterval()
-    var timer = NSTimer()
-    var audioPlayer: AVAudioPlayer = AVAudioPlayer()
+    //var secondsTillAlarmDate = NSDate()
+    //var secondsTillAlarmInterval = NSTimeInterval()
+    //var timer = NSTimer()
+    //var audioPlayer: AVAudioPlayer = AVAudioPlayer()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound ], categories: nil)
+        //let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound ], categories: nil)
         
-        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        //UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
 
         
         UIApplication.sharedApplication().idleTimerDisabled = true
@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //self.timer = NSTimer.scheduledTimerWithTimeInterval(self.secondsTillAlarmInterval, target: self, selector: Selector("playAlarmSounds"), userInfo: nil, repeats: false)
         
-        print("secondsTillAlarm on Delegate: \(secondsTillAlarmInterval)")
+        //print("secondsTillAlarm on Delegate: \(secondsTillAlarmInterval)")
         
     }
 
@@ -65,7 +65,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+
     }
     
 //    func playAlarmSounds(){
