@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            name: UIDeviceBatteryLevelDidChangeNotification,
 //            object: nil)
         
+        
         //self.timer = NSTimer.scheduledTimerWithTimeInterval(self.secondsTillAlarmInterval, target: self, selector: Selector("playAlarmSounds"), userInfo: nil, repeats: false)
         
         //print("secondsTillAlarm on Delegate: \(secondsTillAlarmInterval)")
