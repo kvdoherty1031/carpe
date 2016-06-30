@@ -127,7 +127,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     }
 
     override func viewDidAppear(animated: Bool) {
-        let famousAlert = UIAlertController(title: "Where's your sensor?", message: "McSleepsAlot, Make sure your sensor is far away from your bed", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let famousAlert = UIAlertController(title: "Where's your sensor?", message: "Make sure your sensor is far away from your bed", preferredStyle: UIAlertControllerStyle.ActionSheet)
 
         famousAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         
