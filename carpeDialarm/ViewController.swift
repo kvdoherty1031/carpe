@@ -282,7 +282,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         //audioPlayer.prepareToPlay()
         self.timer.invalidate()
         self.audioPlayer.play()
-        //self.performSelector("playAlarmSounds", withObject: nil, afterDelay: 1)
+        self.performSelector("playAlarmSounds", withObject: nil, afterDelay: 20)
         }
     }
 
