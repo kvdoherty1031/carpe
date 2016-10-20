@@ -278,7 +278,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
 
         print("self.timer = \(self.timer.timeInterval)")
         print("playAlarmSounds in .Delegate called")
-            
+             
         //audioPlayer.prepareToPlay()
         self.timer.invalidate()
         self.audioPlayer.play()
