@@ -19,11 +19,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
     @IBOutlet var alarmTimePickerView: AlarmTimePickerView!
     
-    var dateAndTime = NSDate()
+    var dateAndTime = Date()
     
-    var alarmPickedTimeDate = NSDate()
+    var alarmPickedTimeDate = Date()
     
-    var buttonStartTime = NSDate()
+    var buttonStartTime = Date()
     
     var alarmSetTime = String()
     
@@ -45,15 +45,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
     var beaconRegion: CLBeaconRegion = CLBeaconRegion()
     
-    var secondsTillAlarmFromArray = NSTimeInterval()
+    var secondsTillAlarmFromArray = TimeInterval()
     
-    var timeIntervalTillAlarmForDelegate = NSTimeInterval()
+    var timeIntervalTillAlarmForDelegate = TimeInterval()
     
     var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     
     let notification = UILocalNotification()
     
-    var timer = NSTimer()
+    var timer = Timer()
     
     var beacon = CLBeacon()
 
@@ -61,15 +61,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        let formatter = NSDateFormatter()
-        formatter.locale =  NSLocale.currentLocale()
-        buttonStartTime = NSDate()
-        alarmSetTime = NSDateFormatter.localizedStringFromDate(buttonStartTime, dateStyle: .NoStyle, timeStyle: .ShortStyle)
+        let formatter = DateFormatter()
+        formatter.locale =  Locale.current
+        buttonStartTime = Date()
+        alarmSetTime = DateFormatter.localizedString(from: buttonStartTime, dateStyle: .none, timeStyle: .short)
     
-        alarmTimeButton.setTitle(alarmSetTime, forState: UIControlState.Normal)
+        alarmTimeButton.setTitle(alarmSetTime, for: UIControlState())
         alarmTimeButton.layer.cornerRadius = 10
     
-        alarmTimePickerView.frame = CGRectMake(view.frame.origin.x, view.frame.height, view.frame.width, alarmTimePickerView.frame.height)
+        alarmTimePickerView.frame = CGRect(x: view.frame.origin.x, y: view.frame.height, width: view.frame.width, height: alarmTimePickerView.frame.height)
         alarmTimePickerView.delegate = self
         view.addSubview(alarmTimePickerView)
         print("the current time at view did load is NSDate \(dateAndTime)" )
@@ -94,12 +94,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         var audioFileName = String()
         audioFileName = "railroad_crossing_bell-"
         var soundURL = NSObject()
-        soundURL = NSBundle.mainBundle().pathForResource(audioFileName, ofType: "mp3")!
-        var sound = NSURL()
-        sound = NSURL(fileURLWithPath: soundURL as! String)
+        soundURL = Bundle.main.path(forResource: audioFileName, ofType: "mp3")! as NSObject
+        var sound = URL(fileURLWithPath: soundURL as! String)
 
         do {
-                self.audioPlayer = try AVAudioPlayer(contentsOfURL: sound)
+                self.audioPlayer = try AVAudioPlayer(contentsOf: sound)
                 print("audioPlayer = try AVAudioPlayer(contentsOfURL: sound!)")
             
         }
@@ -112,26 +111,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
         beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
-        beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "alarmBeacon region")
+        beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "alarmBeacon region")
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = false
     
         //self.locationManager.startUpdatingLocation()
     }
     
-    func beaconManager(manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
+    func beaconManager(_ manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
         self.audioPlayer.stop()
         print("entered the region" )
         self.alarmActivated = false
 
     }
 
-    override func viewDidAppear(animated: Bool) {
-        let famousAlert = UIAlertController(title: "Where's your sensor?", message: "Make sure your sensor is far away from your bed", preferredStyle: UIAlertControllerStyle.ActionSheet)
+    override func viewDidAppear(_ animated: Bool) {
+        let famousAlert = UIAlertController(title: "Where's your sensor?", message: "Make sure your sensor is far away from your bed", preferredStyle: UIAlertControllerStyle.actionSheet)
 
-        famousAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        famousAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         
-        presentViewController(famousAlert, animated: true, completion: nil)
+        present(famousAlert, animated: true, completion: nil)
     }
 
 //func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
@@ -150,7 +149,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
 //    }
 
 
-    func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    func beaconManager(_ manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         if beacons.count > 0{
             beacon = beacons[0]
             print("beaconMajor is \(beacon.major) and testBeaconValue called")
@@ -162,7 +161,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         if beacon.major == 55315 {
             print("within distance of beacon. Shutting off alarm")
             self.audioPlayer.stop()
-            beaconManager.stopRangingBeaconsInRegion(beaconRegion)
+            beaconManager.stopRangingBeacons(in: beaconRegion)
             }
         }
     
@@ -173,13 +172,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
 
 
 
-    @IBAction func alarmTimeButtonPushed(sender: UIButton) {
+    @IBAction func alarmTimeButtonPushed(_ sender: UIButton) {
 
         self.alarmActivated = true
-        let formatter = NSDateFormatter()
-        formatter.locale =  NSLocale.currentLocale()
-        alarmPickedTimeDate = NSDate()
-        alarmPickedTime = NSDateFormatter.localizedStringFromDate(dateAndTime, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        let formatter = DateFormatter()
+        formatter.locale =  Locale.current
+        alarmPickedTimeDate = Date()
+        alarmPickedTime = DateFormatter.localizedString(from: dateAndTime, dateStyle: .short, timeStyle: .short)
     
         let currentMenu = currentMenuView
         
@@ -189,7 +188,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         
         pickerView = alarmTimePickerView
         
-        if let viewForPicker = pickerView where currentMenu != pickerView{
+        if let viewForPicker = pickerView , currentMenu != pickerView{
             presentPicker(viewForPicker)
         }
     }
@@ -197,22 +196,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
  
 
-    func presentPicker(menuView: UIView){
+    func presentPicker(_ menuView: UIView){
         currentMenuView = menuView
         
-        UIView.animateWithDuration(0.6) { () -> Void in
-            menuView.frame = CGRectMake(menuView.frame.origin.x, menuView.frame.origin.y - menuView.frame.height, menuView.frame.width, menuView.frame.size.height)
-        }
+        UIView.animate(withDuration: 0.6, animations: { () -> Void in
+            menuView.frame = CGRect(x: menuView.frame.origin.x, y: menuView.frame.origin.y - menuView.frame.height, width: menuView.frame.width, height: menuView.frame.size.height)
+        }) 
     }
     
     
     func dismissPicker() {
-        UIView.animateWithDuration(1.0) { () -> Void in
+        UIView.animate(withDuration: 1.0, animations: { () -> Void in
             if let picker = self.currentMenuView{
                 self.currentMenuView = nil
-                picker.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.size.height, self.view.frame.size.width, picker.frame.height)
+                picker.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.size.height, width: self.view.frame.size.width, height: picker.frame.height)
                 }
-            }
+            }) 
         }
     }
 
@@ -232,9 +231,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         dismissPicker()
     }
     
-    func datePickerValueChanged(date: NSDate) {
-        var currentDate = NSDate()
-        var secondsTillAlarm = [date .timeIntervalSinceDate(currentDate)]
+    func datePickerValueChanged(_ date: Date) {
+        let currentDate = Date()
+        var secondsTillAlarm = [date .timeIntervalSince(currentDate)]
         secondsTillAlarmFromArray = secondsTillAlarm[0]
             if secondsTillAlarmFromArray < 0 {
                     secondsTillAlarmFromArray = 86400 + secondsTillAlarmFromArray
@@ -249,32 +248,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
 
         if let menuView = currentMenuView{
             if menuView == alarmTimePickerView{
-                alarmSetTime = NSDateFormatter.localizedStringFromDate(date, dateStyle: .NoStyle, timeStyle: .ShortStyle)
+                alarmSetTime = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .short)
                 print("alarmTime: \(alarmSetTime)")
-                alarmTimeButton.setTitle(alarmSetTime, forState: UIControlState.Normal)
+                alarmTimeButton.setTitle(alarmSetTime, for: UIControlState())
                 }
             }
         }
     
     func setTimers(){
         //notification:
-        notification.fireDate = NSDate(timeIntervalSinceNow:secondsTillAlarmFromArray)
+        notification.fireDate = Date(timeIntervalSinceNow:secondsTillAlarmFromArray)
         notification.alertBody = "Wake Up!"
         notification.alertAction = "be awesome!"
         let sound = ("railroad_crossing_bell-") as String
         notification.soundName = sound + ".mp3"
         notification.userInfo = ["CustomField1": "w00t"]
 
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        UIApplication.shared.scheduleLocalNotification(notification)
         //end of notification
      
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(self.secondsTillAlarmFromArray, target: self, selector: Selector("playAlarmSounds"), userInfo: nil, repeats: false)
+        self.timer = Timer.scheduledTimer(timeInterval: self.secondsTillAlarmFromArray, target: self, selector: #selector(ViewController.playAlarmSounds), userInfo: nil, repeats: false)
         print("secondsTillAlarmFromArray: \(self.secondsTillAlarmFromArray)")
     }
 
     func playAlarmSounds(){
         //beaconManager.startMonitoringForRegion(beaconRegion)
-        beaconManager.startRangingBeaconsInRegion(beaconRegion)
+        beaconManager.startRangingBeacons(in: beaconRegion)
 
         print("self.timer = \(self.timer.timeInterval)")
         print("playAlarmSounds in .Delegate called")
@@ -282,7 +281,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         //audioPlayer.prepareToPlay()
         self.timer.invalidate()
         self.audioPlayer.play()
-        self.performSelector("playAlarmSounds", withObject: nil, afterDelay: 0)
+        self.perform(#selector(ViewController.playAlarmSounds), with: nil, afterDelay: 0)
         }
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF15B411DCD38CD00B0AA99 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF15B401DCD38CD00B0AA99 /* EstimoteSDK.framework */; };
+		94D95629D516269BDB484208 /* Pods_carpeDialarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E904C70012073DB967AA01 /* Pods_carpeDialarm.framework */; };
 		D121EDBB1D064F8600C42F1A /* railroad_crossing_bell-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D121EDBA1D064F8600C42F1A /* railroad_crossing_bell-.mp3 */; };
 		D1A126F31CFC701000D9A86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F21CFC701000D9A86A /* AppDelegate.swift */; };
 		D1A126F51CFC701000D9A86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F41CFC701000D9A86A /* ViewController.swift */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03E904C70012073DB967AA01 /* Pods_carpeDialarm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carpeDialarm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF15B401DCD38CD00B0AA99 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
+		48D130FA81602662BF6B6FAD /* Pods-carpeDialarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpeDialarm.release.xcconfig"; path = "Pods/Target Support Files/Pods-carpeDialarm/Pods-carpeDialarm.release.xcconfig"; sourceTree = "<group>"; };
+		57B0B3523B39CCE904DF8AC6 /* Pods-carpeDialarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carpeDialarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-carpeDialarm/Pods-carpeDialarm.debug.xcconfig"; sourceTree = "<group>"; };
 		D121EDBA1D064F8600C42F1A /* railroad_crossing_bell-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "railroad_crossing_bell-.mp3"; sourceTree = "<group>"; };
 		D1A126EF1CFC701000D9A86A /* carpeDialarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carpeDialarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A126F21CFC701000D9A86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,21 +51,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A127111CFE806A00D9A86A /* SystemConfiguration.framework in Frameworks */,
+				0AF15B411DCD38CD00B0AA99 /* EstimoteSDK.framework in Frameworks */,
 				D1A1270F1CFE805900D9A86A /* Foundation.framework in Frameworks */,
 				D1A1270D1CFE805000D9A86A /* CoreBluetooth.framework in Frameworks */,
 				D1A1270B1CFE804500D9A86A /* CoreLocation.framework in Frameworks */,
 				D1A127091CFE745500D9A86A /* EstimoteSDK.framework in Frameworks */,
+				94D95629D516269BDB484208 /* Pods_carpeDialarm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B4799B12EE3B0DCF7933417 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57B0B3523B39CCE904DF8AC6 /* Pods-carpeDialarm.debug.xcconfig */,
+				48D130FA81602662BF6B6FAD /* Pods-carpeDialarm.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE49DC8B3F20AD011F9BECE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AF15B401DCD38CD00B0AA99 /* EstimoteSDK.framework */,
+				03E904C70012073DB967AA01 /* Pods_carpeDialarm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1A126E61CFC701000D9A86A = {
 			isa = PBXGroup;
 			children = (
 				D1A126F11CFC701000D9A86A /* carpeDialarm */,
 				D1A126F01CFC701000D9A86A /* Products */,
+				4B4799B12EE3B0DCF7933417 /* Pods */,
+				CE49DC8B3F20AD011F9BECE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1A127011CFC701000D9A86A /* Build configuration list for PBXNativeTarget "carpeDialarm" */;
 			buildPhases = (
+				E5AB529EDAEFF9194B4710DE /* [CP] Check Pods Manifest.lock */,
 				D1A126EB1CFC701000D9A86A /* Sources */,
 				D1A126EC1CFC701000D9A86A /* Frameworks */,
 				D1A126ED1CFC701000D9A86A /* Resources */,
+				0EC8B73E73B61F4054B113AB /* [CP] Embed Pods Frameworks */,
+				90C8C29B6ADD62E66295FF29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +164,7 @@
 					D1A126EE1CFC701000D9A86A = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = U6LLNV8Q7K;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -172,6 +204,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EC8B73E73B61F4054B113AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpeDialarm/Pods-carpeDialarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C8C29B6ADD62E66295FF29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-carpeDialarm/Pods-carpeDialarm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AB529EDAEFF9194B4710DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1A126EB1CFC701000D9A86A /* Sources */ = {
@@ -297,36 +377,42 @@
 		};
 		D1A127021CFC701000D9A86A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57B0B3523B39CCE904DF8AC6 /* Pods-carpeDialarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/carpeDialarm",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = carpeDialarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ObjCBridge.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D1A127031CFC701000D9A86A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D130FA81602662BF6B6FAD /* Pods-carpeDialarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/carpeDialarm",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = carpeDialarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ObjCBridge.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

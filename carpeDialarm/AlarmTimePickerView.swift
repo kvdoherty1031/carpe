@@ -11,7 +11,7 @@ import UIKit
 protocol DatePickerViewDelegate{
     func cancelPressed()
     func savePressed()
-    func datePickerValueChanged(date: NSDate)
+    func datePickerValueChanged(_ date: Date)
 }
 
 
@@ -22,7 +22,7 @@ class AlarmTimePickerView: UIView {
 
     var delegate: DatePickerViewDelegate?
     
-    @IBAction func cancelBarButtonItemPressed(sender: UIBarButtonItem) {
+    @IBAction func cancelBarButtonItemPressed(_ sender: UIBarButtonItem) {
     
         delegate?.cancelPressed()
     
@@ -30,7 +30,7 @@ class AlarmTimePickerView: UIView {
     
     
     
-    @IBAction func saveAlarmTimeBarButtonItemPressed(sender: UIBarButtonItem) {
+    @IBAction func saveAlarmTimeBarButtonItemPressed(_ sender: UIBarButtonItem) {
         delegate?.savePressed()
         
     
@@ -38,7 +38,7 @@ class AlarmTimePickerView: UIView {
    
     
     
-    @IBAction func datePickerChanged(sender: UIDatePicker) {
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         delegate?.datePickerValueChanged(sender.date)
     
     
