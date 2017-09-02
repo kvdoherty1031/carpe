@@ -1,0 +1,6 @@
+framework module Pods_carpeDialarm {
+  umbrella header "Pods-carpeDialarm-umbrella.h"
+
+  export *
+  module * { export * }
+}

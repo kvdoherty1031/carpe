@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
 
-        
+
         UIApplication.shared.isIdleTimerDisabled = true
 
         return true

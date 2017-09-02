@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0AF15B411DCD38CD00B0AA99 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF15B401DCD38CD00B0AA99 /* EstimoteSDK.framework */; };
-		94D95629D516269BDB484208 /* Pods_carpeDialarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E904C70012073DB967AA01 /* Pods_carpeDialarm.framework */; };
 		D121EDBB1D064F8600C42F1A /* railroad_crossing_bell-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D121EDBA1D064F8600C42F1A /* railroad_crossing_bell-.mp3 */; };
 		D1A126F31CFC701000D9A86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F21CFC701000D9A86A /* AppDelegate.swift */; };
 		D1A126F51CFC701000D9A86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A126F41CFC701000D9A86A /* ViewController.swift */; };
@@ -16,7 +15,6 @@
 		D1A126FA1CFC701000D9A86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A126F91CFC701000D9A86A /* Assets.xcassets */; };
 		D1A126FD1CFC701000D9A86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */; };
 		D1A127051CFC742400D9A86A /* AlarmTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A127041CFC742400D9A86A /* AlarmTimePickerView.swift */; };
-		D1A127091CFE745500D9A86A /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A127081CFE745500D9A86A /* EstimoteSDK.framework */; };
 		D1A1270B1CFE804500D9A86A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A1270A1CFE804400D9A86A /* CoreLocation.framework */; };
 		D1A1270D1CFE805000D9A86A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A1270C1CFE805000D9A86A /* CoreBluetooth.framework */; };
 		D1A1270F1CFE805900D9A86A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A1270E1CFE805900D9A86A /* Foundation.framework */; };
@@ -55,8 +53,6 @@
 				D1A1270F1CFE805900D9A86A /* Foundation.framework in Frameworks */,
 				D1A1270D1CFE805000D9A86A /* CoreBluetooth.framework in Frameworks */,
 				D1A1270B1CFE804500D9A86A /* CoreLocation.framework in Frameworks */,
-				D1A127091CFE745500D9A86A /* EstimoteSDK.framework in Frameworks */,
-				94D95629D516269BDB484208 /* Pods_carpeDialarm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,13 +238,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-carpeDialarm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -387,6 +386,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = carpeDialarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +408,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = carpeDialarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.kevin.carpeDialarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";

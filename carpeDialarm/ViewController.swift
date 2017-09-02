@@ -41,10 +41,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
     var systemSoundID = SystemSoundID()
     
-    let beaconManager: ESTBeaconManager = ESTBeaconManager()
-    
-    var beaconRegion: CLBeaconRegion = CLBeaconRegion()
-    
     var secondsTillAlarmFromArray = TimeInterval()
     
     var timeIntervalTillAlarmForDelegate = TimeInterval()
@@ -56,6 +52,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     var timer = Timer()
     
     var beacon = CLBeacon()
+    
+    let beaconManager: ESTBeaconManager = ESTBeaconManager()
+    
+    let beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "alarmBeacon region")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +111,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
         beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
-        beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "alarmBeacon region")
+
+        //        beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "alarmBeacon region")
+        
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = false
     
