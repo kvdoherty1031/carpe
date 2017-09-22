@@ -98,9 +98,9 @@
 		D1A126F11CFC701000D9A86A /* carpeDialarm */ = {
 			isa = PBXGroup;
 			children = (
-				D1A127071CFE711E00D9A86A /* ObjCBridge.h */,
 				D1A126F61CFC701000D9A86A /* Main.storyboard */,
 				D1A126FB1CFC701000D9A86A /* LaunchScreen.storyboard */,
+				D1A127071CFE711E00D9A86A /* ObjCBridge.h */,
 				D1A126F21CFC701000D9A86A /* AppDelegate.swift */,
 				D1A126F41CFC701000D9A86A /* ViewController.swift */,
 				D1A127041CFC742400D9A86A /* AlarmTimePickerView.swift */,

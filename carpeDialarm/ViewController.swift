@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  carpeDialarm
-//
-//  Created by Kevin Doherty on 5/30/16.
-//  Copyright © 2016 Kevin Doherty. All rights reserved.
-//
 
 import UIKit
 import AVFoundation
@@ -59,7 +52,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     
         let formatter = DateFormatter()
         formatter.locale =  Locale.current
@@ -77,7 +69,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
         self.locationManager.delegate = self
         self.locationManager.requestAlwaysAuthorization()
-//        self.locationManager.allowsBackgroundLocationUpdates = true
     
         self.audioPlayer = AVAudioPlayer()
     
@@ -111,13 +102,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
     
         beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
-
-        //        beaconRegion = CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "alarmBeacon region")
         
         beaconRegion.notifyOnEntry = true
         beaconRegion.notifyOnExit = false
     
-        //self.locationManager.startUpdatingLocation()
     }
     
     func beaconManager(_ manager: AnyObject, didEnterRegion region: CLBeaconRegion) {
@@ -134,21 +122,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         
         present(famousAlert, animated: true, completion: nil)
     }
-
-//func beaconManager(manager: AnyObject, didExitRegion region: CLBeaconRegion) {
-//        print("exited the region")
-//    }
-//    
-//
-//func beaconManager(manager: AnyObject, monitoringDidFailForRegion region: CLBeaconRegion?, withError error: NSError) {
-//        print("region did fail \(manager) \(region) \(error)")
-//    }
-//
-//
-//func beaconManager(manager: AnyObject, didStartMonitoringForRegion region: CLBeaconRegion) {
-//        
-//        print("did start monitoring region")
-//    }
 
 
     func beaconManager(_ manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
@@ -245,9 +218,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, ESTBeaconMana
         
         self.setTimers()
     
-//    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//    appDelegate.secondsTillAlarmInterval = secondsTillAlarmFromArray
-
         if let menuView = currentMenuView{
             if menuView == alarmTimePickerView{
                 alarmSetTime = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .short)

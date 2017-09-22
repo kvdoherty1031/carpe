@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  carpeDialarm
-//
-//  Created by Kevin Doherty on 5/30/16.
-//  Copyright © 2016 Kevin Doherty. All rights reserved.
-//
 
 import UIKit
 import AVFoundation

@@ -1,10 +1,3 @@
-//
-//  AlarmTimePickerView.swift
-//  carpeDialarm
-//
-//  Created by Kevin Doherty on 5/30/16.
-//  Copyright © 2016 Kevin Doherty. All rights reserved.
-//
 
 import UIKit
 
@@ -23,30 +16,17 @@ class AlarmTimePickerView: UIView {
     var delegate: DatePickerViewDelegate?
     
     @IBAction func cancelBarButtonItemPressed(_ sender: UIBarButtonItem) {
-    
         delegate?.cancelPressed()
-    
     }
-    
     
     
     @IBAction func saveAlarmTimeBarButtonItemPressed(_ sender: UIBarButtonItem) {
         delegate?.savePressed()
-        
-    
     }
    
     
-    
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         delegate?.datePickerValueChanged(sender.date)
-    
-    
     }
-
-
-
-
-
 
 }
